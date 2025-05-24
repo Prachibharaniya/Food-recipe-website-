@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Menu Bar</title>
+    <title>Delicious Recipes</title>
+    <style>
+            body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+        .login-container {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 0px 10px gray;
+            border-radius: 10px;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .login-btn:hover {
+            background-color: #e65c00;
+        }
+        .register-link {
+            display: block;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .register-link:hover {
+            text-decoration: underline;
+        }
+        body
+nav {
+    background-color: #333;  
+    padding: 10px;
+}
+
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 10;
+    gap: 20;
+    display: flex;
+   
+}
+
+.menu li {
+    margin: 0;
+    padding: 0;
+    gap: 30;
+    margin-right:240px;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 40px;
+    display: block;
+}
+
+.menu li a:hover {
+            background-color: #555;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            background-color: #ff5733;
+            color: white;
+            padding: 15px;
+            margin: 0;
+        }
+        .recipe-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+        .recipe {
+            background: white;
+            width: 300px;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            color: white;
+            background: #ff5733;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        .review-section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            width: 70%;
+            margin: 40px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #ff5733;
+            text-align: center;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit-btn {
+            background-color: #ff5733;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            background-color: #e04b28;
+        }
+        .review-box {
+            background-color: #f1f1f1;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .reviewer-name {
+            color: #ff5733;
+            font-weight: bold;
+        }
+        .review-text {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+ <h1>Delicious Recipes</h1>
+
+    <div class="recipe-container">
+        <div class="recipe">
+            <img src="https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,w_1460/k/archive/430ec9cc328b3bfdb1a3f2345a053da676b2b630"  width="300" height="400" alt="Pasta">
+            <h2>Pasta Alfredo</h2>
+            <p>A creamy and delicious Italian dish with cheese and garlic.</p>
+            <a href="pasta.html">View Recipe</a>
+        </div>
+
+        <div class="recipe">
+            <img src="https://th.bing.com/th/id/OIP.kDl2JuPZ3tRVTWGQq260bgHaKX?rs=1&pid=ImgDetMain" width="300" height="400" alt="Pancakes">
+            <h2>Fluffy Pancakes</h2>
+            <p>Soft and fluffy pancakes perfect for a sweet breakfast.</p>
+            <a href="pancakes.html">View Recipe</a>
+        </div>
+
+        <div class="recipe">
+            <img src="https://preppykitchen.com/wp-content/uploads/2021/10/Cheese-Pizza-Blog1-768x896.jpg" width="300" height="400"  alt="Pizza">
+            <h2>Cheese Pizza</h2>
+            <p>Make your own pizza with fresh ingredients and toppings.</p>
+            <a href="paneerpizza.html">View Recipe</a>
+        </div>
+
+        <div class="recipe">
+            <img src="https://i0.wp.com/www.freshfitkitchen.com/wp-content/uploads/2018/04/Garlic-Herb-and-Cheese-Bread-Sticks-10-1.jpg?w=1830&ssl=1" width="300" height="400"  alt="moctails">
+            <h2>Garlic Breadsticks 🥖</h2>
+            <p>Crispy,buttery garlic breadsticks with a hint of herbs and cheese—perfect for dipping!</p>
+            <a href="garlicbread.html">View Recipe</a>
+        </div>
+        <div class="recipe">
+            <img src="https://www.cucinabyelena.com/wp-content/uploads/2023/03/0Z4A8869-scaled.jpg" width="300" height="400"  alt="moctails">
+            <h2>Crispy Cheese Balls 🧀</h2>
+            <p>Crispy Cheese Balls – Golden, crunchy, and oozing with cheesy goodness! .</p>
+            <a href="cheeseballs.html">View Recipe</a>
+        </div>
+        <div class="recipe">
+            <img src="https://www.sheknows.com/wp-content/uploads/2018/08/awmh0v8zgqz7ixab5frf.jpeg" width="300" height="400"  alt="moctails">
+            <h2>Moctails</h2>
+            <p>Refreshing and vibrant non-alcoholic drinks perfect for any occasion! </p>
+            <a href="moctails.html">View Recipe</a>
+        </div>
+        <div class="recipe">
+            <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/02/schezwan-noodles-recipe-1.jpg" width="300" height="400"  alt="moctails">
+            <h2>Spicy Schezwan Noodles </h2>
+            <p>Fiery, flavorful noodles tossed in a bold Schezwan sauce with crunchy veggies!</p>
+            <a href="noodles.html">View Recipe</a>
+        </div>
+        <div class="recipe">
+            <img src="https://www.cookinwithmima.com/wp-content/uploads/2023/04/sweet-chilli-fries-400x533.jpg" width="300" height="400"  alt="moctails">
+            <h2>Honey Chilli Potatoes 🥔</h2>
+            <p>Honey Chilli Potato tossed in a spicy,and tangy sauce-an irresistible snack! </p>
+            <a href="chillipotato.html">View Recipe</a>
+        </div>
+        <div class="recipe">
+            <img src="https://www.cookingclassy.com/wp-content/uploads/2022/02/molten-lava-cake-17.jpg" width="300" height="400"  alt="moctails" >
+            <h2>Chocolate Lava Cake 🍫</h2>
+            <p>"Indulge in the rich, molten delight of a decadent chocolate lava cake."</p>
+            <a href="chocolatelavcake.html">View Recipe</a>
+        </div>
+    </div>
+    <div class="review-section">
+        <h2>Customer Reviews</h2>
+
+        <!-- Review Submission Form -->
+        <form id="reviewForm">
+            <input type="text" id="username" placeholder="Enter Your Name" required>
+            <textarea id="reviewText" rows="4" placeholder="Write your review..." required></textarea>
+            <button type="submit" class="submit-btn">Submit Review</button>
+        </form>
+
+        <!-- Display Reviews -->
+        <div id="reviewsContainer">
+            <h2 style="text-align: center;">All Reviews</h2>
+        </div>
+    </div>
+
+    <script>
+        const reviewForm = document.getElementById('reviewForm');
+        const reviewsContainer = document.getElementById('reviewsContainer');
+
+        // Load Reviews from Local Storage
+        function loadReviews() {
+            const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+            reviews.forEach(review => displayReview(review.username, review.text));
+        }
+
+        // Display a Review on the Page
+        function displayReview(username, text) {
+            const reviewBox = document.createElement('div');
+            reviewBox.classList.add('review-box');
+            reviewBox.innerHTML = `<span class="reviewer-name">${username}</span><p class="review-text">${text}</p>`;
+            reviewsContainer.appendChild(reviewBox);
+        }
+
+        // Handle Form Submission
+        reviewForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const reviewText = document.getElementById('reviewText').value;
+
+            // Save Review to Local Storage
+            const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+            reviews.push({ username, text: reviewText });
+            localStorage.setItem('reviews', JSON.stringify(reviews));
+
+            // Display the Review on the Page
+            displayReview(username, reviewText);
+
+            // Clear the Form
+            reviewForm.reset();
+        });
+
+        // Load Reviews when the Page Loads
+        loadReviews();
+    </script>
+    <footer>
+        <div style="background-color: #333; color: white; text-align: center; padding: 20px;">
+            <p>&copy; 2025 My Food Recipes. All rights reserved.</p>
+            <p>Follow us on:</p>
+            <a href="#" style="color: white; margin: 0 10px; text-decoration: none;">Facebook</a><br>
+            <a href="#" style="color: white; margin: 0 10px; text-decoration: none;">Instagram</a><br>
+            <a href="#" style="color: white; margin: 0 10px; text-decoration: none;">Youtube</a><br>
+            <p>Contact us:</p>
+            <p>Phone: <a href="tel:91 2342342345" style="color: white;">91 2342342345</a></p>
+            <p>Email: <a href="mailto:support@myfoodrecipes.com" style="color: white;">support@myfoodrecipes.com</a></p>
+            <p>Address: 123 Food Street, Jaipur Rajasthan, FC 45678</p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>

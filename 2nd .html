@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Ratings</title>
+    <style>
+        .rating-container {
+            margin: 20px auto;
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .stars {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+
+        .stars span {
+            font-size: 30px;
+            cursor: pointer;
+            color: gray;
+        }
+
+        .stars span.active,
+        .stars span:hover,
+        .stars span:hover ~ span {
+            color: gold;
+        }
+
+        .submit-btn {
+            background-color: #ff5733;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: #e04b28;
+        }
+
+        .rating-display {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="rating-container">
+        <h2>Rate This Recipe</h2>
+        <div class="stars" id="starContainer">
+            <span data-value="1">&#9733;</span>
+            <span data-value="2">&#9733;</span>
+            <span data-value="3">&#9733;</span>
+            <span data-value="4">&#9733;</span>
+            <span data-value="5">&#9733;</span>
+        </div>
+        <button class="submit-btn" id="submitRating">Submit Rating</button>
+        <div class="rating-display" id="ratingDisplay">Average Rating: 0.0 (0 reviews)</div>
+    </div>
+
+    <script>
+        const stars = document.querySelectorAll('.stars span');
+        const submitBtn = document.getElementById('submitRating');
+        const ratingDisplay = document.getElementById('ratingDisplay');
+        let selectedRating = 0;
+
+        // Load existing ratings from localStorage
+        let ratings = JSON.parse(localStorage.getItem('ratings')) || [];
+        updateAverageRating();
+
+        // Handle star click
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                selectedRating = parseInt(star.getAttribute('data-value'));
+                highlightStars(selectedRating);
+            });
+        });
+
+        function highlightStars(rating) {
+            stars.forEach(star => {
+                if (parseInt(star.getAttribute('data-value')) <= rating) {
+                    star.classList.add('active');
+                } else {
+                    star.classList.remove('active');
+                }
+            });
+        }
+
+        submitBtn.addEventListener('click', () => {
+            if (selectedRating === 0) {
+                alert('Please select a rating before submitting.');
+                return;
+            }
+
+            ratings.push(selectedRating);
+            localStorage.setItem('ratings', JSON.stringify(ratings));
+            updateAverageRating();
+            alert('Thank you for your rating!');
+            highlightStars(0);
+        });
+
+        function updateAverageRating() {
+            if (ratings.length === 0) {
+                ratingDisplay.textContent = "Average Rating: 0.0 (0 reviews)";
+                return;
+            }
+
+            const average = (ratings.reduce((a, b) => a + b, 0) / ratings.length).toFixed(1);
+            ratingDisplay.textContent = `Average Rating: ${average} (${ratings.length} reviews)`;
+        }
+    </script>
+</body>
+</html>
